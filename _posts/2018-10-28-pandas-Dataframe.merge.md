@@ -11,6 +11,7 @@ Merge DataFrame objects by performing a database-style join operation by columns
 If joining columns on columns, the DataFrame indexes will be ignored. Otherwise if joining indexes on indexes or indexes on a column or columns, the index will be passed on.
 
 合并两个dataframe
+默认不指定合并列，则会使用二者列的交集,如果不存在会产生异常，如果有，则合并后的DataFrame的列为二者所有列并集除去相同的
 
 1. on：指定dataframe合并的列，需要left、right都含有此列，如果没有则会空。如果要合并的列在left和right中列名不同，则可以分别用left_on和right_on来指定
 

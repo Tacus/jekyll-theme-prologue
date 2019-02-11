@@ -1,8 +1,10 @@
 ---
 title: pandas.DataFrame.merge
+date: 2018-10-28 00:00:00 Z
 author: tacus
 layout: post
 ---
+
 [官方文档] [1]
 
 >

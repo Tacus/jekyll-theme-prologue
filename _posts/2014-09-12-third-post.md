@@ -1,3 +1,8 @@
+---
+title: Third Post
+date: 2014-09-12 00:00:00 Z
+---
+
 <!-- ---
 title: Third Post
 author: Chris

@@ -1,8 +1,8 @@
 ---
 title: Second Post
-date: 2013-09-12 00:00:00 Z
----
+date: 2013-09-12 00:00:00 +0000
 
+---
 <!-- ---
 title: Second Post
 author: Chris

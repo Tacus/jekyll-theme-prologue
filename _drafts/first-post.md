@@ -1,8 +1,8 @@
 ---
 title: First Post
-date: 2012-09-12 00:00:00 +0000
-
+date: 2012-09-12 00:00:00 Z
 ---
+
 <!-- ---
 title: First Post
 author: Chris

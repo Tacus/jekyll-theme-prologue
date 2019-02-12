@@ -1,0 +1,9 @@
+---
+label: textre
+hide_body: false
+is_partial: false
+fields:
+- type: textarea
+  name: textarea
+  label: textarea
+  hidden: false

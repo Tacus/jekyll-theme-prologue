@@ -1,7 +1,4 @@
 ---
----
-
----
 label: textre
 hide_body: false
 is_partial: false
@@ -12,4 +9,4 @@ fields:
   hidden: false
 pages:
 - _posts/2019-02-12-字符编码.md
-- _posts/unity 周期函数.md
+- _posts/2019-02-12-unity 周期函数.md

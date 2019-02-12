@@ -1,7 +1,4 @@
 ---
----
-
----
 label: textre
 hide_body: false
 is_partial: false
@@ -11,4 +8,4 @@ fields:
   label: textarea
   hidden: false
 pages:
-- _posts/字符编码.md
+- _posts/2019-02-12-字符编码.md

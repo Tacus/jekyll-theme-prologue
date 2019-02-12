@@ -1,8 +1,8 @@
 ---
 title: Fourth Post
-date: 2015-09-12 00:00:00 +0000
-
+date: 2015-09-12 00:00:00 Z
 ---
+
 <!-- ---
 title: Fourth Post
 author: Chris

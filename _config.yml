@@ -30,3 +30,5 @@ slack_url:
 dribbble_url: 
 google_analytics: 
 remote_theme: chrisbobbe/jekyll-theme-prologue
+
+theme: jekyll-theme-architect

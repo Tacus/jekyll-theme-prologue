@@ -88,4 +88,6 @@ Strings in Lua can contain the following C-like escape sequences:
     We can specify a character in a literal string also by its numeric value through the escape sequences \ddd and \xhh, where ddd is a sequence of up to three decimal digits and hh is a sequence of exactly two hexadecimal digits. As a somewhat artificial example, the two literals "ALO\n123"" and '\x41LO \10\04923"' have the same value in a system using ASCII: 0x41 (65 in decimal) is the ASCII code for A, 10 is the code for newline, and 49 is the code for the digit 1. (In this example we must write 49 with three digits, as \049, because it is followed by another digit; otherwise Lua would read the escape as \492.) We could also write that same string as '\x41\x4c\x4f\x0a\x31\x32\x33\x22', representing each character by its hexadecimal code.
     Since Lua 5.3, we can also specify UTF-8 characters with the escape sequence \u{h... h}; we can write any number of hexadecimal digits inside the brackets:
 
-> "\\u{3b1} \\u{3b2} \\u{3b3}" --> # # # (The above example assumes an UTF-8 terminal.)
+
+
+"\\u{3b1} \\u{3b2} \\u{3b3}" --> # # # (The above example assumes an UTF-8 terminal.)

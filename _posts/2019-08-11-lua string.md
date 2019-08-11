@@ -57,11 +57,13 @@ string, without any modification to its operands:
 Literal strings
 We can delimit literal strings by single or double matching quotes:
 
-> a = "a line"
-> b = 'another line'
-> They are equivalent; the only difference is that inside each kind of quote we can use the other quote without escapes.
-> As a matter of style, most programmers always use the same kind of quotes for the same kind of strings, where the “kinds” of strings depend on the program. For instance, a library that manipulates XML may reserve single-quoted strings for XML fragments, because those fragments often contain double quotes.
-> Strings in Lua can contain the following C-like escape sequences:
+`a = "a line"
+b = 'another line'`
+They are equivalent; the only difference is that inside each kind of quote we can use the other quote without escapes.
+As a matter of style, most programmers always use the same kind of quotes for the same kind of strings, where the “kinds” of strings depend on the program. For instance, a library that manipulates XML may reserve single-quoted strings for XML fragments, because those fragments often contain double quotes.
+Strings in Lua can contain the following C-like escape sequences:
+
+> 
 
     | :-----| ----: |
     | \a | bell | 

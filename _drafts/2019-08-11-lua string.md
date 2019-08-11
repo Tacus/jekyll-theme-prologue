@@ -31,6 +31,7 @@ We can get the length of a string using the _length operator_ (denoted by #):
                   print(#a)             --> 5
                   print(#"good bye")    --> 8
     
+我们可以获取string的长度通过长度操作符#
 
 This operator always counts the length in bytes, which is not the same as characters in some encodings.
 
@@ -39,11 +40,14 @@ We can concatenate two strings with the concatenation operator .. (two dots). If
                   > "Hello " .. "World"     --> Hello World
                   > "result is " .. 3       --> result is 3
     
-
+#操作符按照字节来计算string的长度，这和某个编码的字符个数是不同的。
+我们可以用两个点..连接两个string。如果某一个操作数是数字，lua会将数字转成string。
 (Some languages use the plus sign for concatenation, but 3 + 5 is different from 3 .. 5.)  
  Remember that strings in Lua are immutable values. The concatenation operator always creates a new
 
 string, without any modification to its operands:
 
-> a = "Hello"  
- > a .. " World" --> Hello World >a --> Hello
+    			> a = "Hello"  
+    			> a .. " World" --> Hello World >a --> Hello
+
+ 

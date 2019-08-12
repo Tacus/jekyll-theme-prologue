@@ -7,6 +7,7 @@ fields:
   label: textarea
   hidden: false
 pages:
+- _posts/2019-08-12-adb链接模拟器.md
 - _posts/2019-08-11-lua string.md
 - _posts/Unity Rect.md
 - _posts/2019-02-12-字符编码.md

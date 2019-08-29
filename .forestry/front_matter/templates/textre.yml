@@ -7,6 +7,7 @@ fields:
   label: textarea
   hidden: false
 pages:
+- _posts/c++ static.md
 - _posts/2019年08月27日21:24:06.md
 - _posts/2019-08-12-adb链接模拟器.md
 - _posts/2019-08-11-lua string.md

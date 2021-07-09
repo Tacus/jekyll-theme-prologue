@@ -1,0 +1,135 @@
+I"<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<p>关于python2中的unicode和str以及python3中的str和bytes
+python3有两种表示字符序列的类型：bytes和str。前者的实例包含原始的8位值；后者的实例包含Unicode字符。</p>
+
+<p>python2中也有两种表示字符序列的类型，分别叫做str和unicode。与python3不同的是，str的实例包含原始的8位值，而unicode的实例，则包含Unicode字符。</p>
+
+<p>上面两句话我特别不懂，所以文章后面就下是希望为了把上面两句话弄懂。</p>
+
+<p>看几个例子：</p>
+
+<p>复制代码
+#在python2中</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(‘x’.decode(‘utf-8’))</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;type ‘unicode’&gt;   #为啥不是二进制了，字符串还能解码？再怎么解</p>
+
+<p>#在python3中</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(‘x’.decode(‘utf-8’))   #这才是正常的吗！
+Traceback (most recent call last):
+  File “<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'decode'  #字符串怎么解，本来就没有吗
+复制代码</module></stdin></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p>首先这个就是Python语言本身的问题，因为在Python2的语法中，默认的str并不是真正意义上我们理解的字符串，而是一个byte数组，或者可以理解成一个纯ascii码字符组成的字符串，与python3中的bytes类型的变量对应，而真正意义上通用的字符串则是unicode类型的变量，它与Python3中的str变量对应本来应该用作byte数组的类型却用来做字符串，你说乱不乱，之所以这样做是为了与之前的程序保持兼容。</p>
+
+<p>在Python2中，作为两种类型的字符序列，str与unicode需要转换，它们是这样转换的.</p>
+
+<p>str——decode方法——》unicode——encode方法——》str</p>
+
+<p>在python3中可以这样对应这转换，配合上面的图，也许会好理解一点。</p>
+
+<p>byte——decode（解码）方法——》str——&gt;encode（编码）方法——》byte</p>
+
+<p>复制代码
+#在python2中</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(‘x’)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;type ‘str’&gt;</p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(‘x’.decode(‘utf-8’))</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;type ‘unicode’&gt;</p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(u’x’.encode(‘utf-8’))</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;type ‘str’&gt;</p>
+
+<p>#在python3中</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(x)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;class ‘str’&gt;</p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(b’x’)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;class ‘bytes’»» type(b’x’.decode(‘utf-8’))
+&lt;class ‘str’&gt;</p>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>type(‘x’.encode(‘utf-8’))</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;class ‘bytes’&gt;</p>
+
+<p>复制代码
+还有就是隐式的转换，当一个unicode字符串和一个str字符串进行连接的时候，会自动将str字符串转换成unicode类型然后再连接，而这个时候使用的编码方式则是系统所默认的编码方式。python2默认的是ASCII，python3默认的是utf-8。</p>
+
+<p>复制代码
+#在python2中</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>x = u’喵’
+x
+u’\u55b5’<br />
+type(x)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;type ‘unicode’&gt;</p>
+
+<p>#在python3中</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>x = u’喵’
+x
+‘喵’ <br />
+type(x)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&lt;class ‘str’&gt;</p>
+
+<p>#为啥结果不一样</p>
+
+:ET

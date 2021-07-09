@@ -1,0 +1,4 @@
+I"P<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<p>关于python2中的unicode和str以及python3中的str和bytes
+python3有两种表示字符序列的类型：bytes和str。前者的实例包含原始的8位值；后者的实例包含Unicode字符。</p>
+:ET

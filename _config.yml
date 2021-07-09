@@ -31,4 +31,5 @@ dribbble_url:
 google_analytics: 
 remote_theme: chrisbobbe/jekyll-theme-prologue
 
-theme: jekyll-theme-architect
+# theme: jekyll-theme-architect
+theme: minimal-mistakes-jekyll
